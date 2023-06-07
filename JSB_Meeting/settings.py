@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'JSB_Meeting.wsgi.application'
+WSGI_APPLICATION = 'JSB_Meeting.wsgi.app'
 
 
 # Database
