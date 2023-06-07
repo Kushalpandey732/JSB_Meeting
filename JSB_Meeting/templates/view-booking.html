@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/assets/css/view-booking.css">
+</head>
+<body>
+    <section class="pricing-table">
+        {% for item in query %}
+            <div class="card" style="background: linear-gradient(to right, #ff4b2b, #ff416c);">
+                <h6 class="type">{{ item.Room }}</h6>
+                <div class="price">{{ item.id }}</div>
+                <h5 class="plan">Status: {{ item.Status}}</h5>
+                <ul class="details">
+                    <li>{{ item.Date }}</li>
+                    <li>From: {{ item.Time_From }} - {{ item.Time_End }}</li>
+                    <li>Owner: {{ item.Booked_By }}</li>
+                </ul>
+                <div class="buy-button">
+                    <h3 class="btn">EDIT</h3>
+                </div>
+            </div>
+        {% endfor %}
+      
+        <!-- <div class="card">
+          <h6 class="type">Awesome</h6>
+          <div class="price"><span>$</span>50</div>
+          <h5 class="plan">plan</h5>
+          <ul class="details">
+            <li>FREE Stickers</li>
+            <li>FREE Delivery</li>
+            <li>24/7 support</li>
+          </ul>
+          <div class="buy-button">
+            <h3 class="btn">subscribe</h3>
+          </div>
+        </div>
+      
+        <div class="card">
+          <h6 class="type">premium</h6>
+          <div class="price"><span>$</span>100</div>
+          <h5 class="plan">plan</h5>
+          <ul class="details">
+            <li>FREE Stickers</li>
+            <li>FREE Delivery</li>
+            <li>24/7 support</li>
+          </ul>
+          <div class="buy-button">
+            <h3 class="btn">subscribe</h3>
+          </div>
+        </div> -->
+      
+    </section>
+    <section class="button-section">
+        <div class="button-container">
+            <a class="button" href='{% url "home_view"%}'>GO BACK</a>
+        </div>
+    </section>
+</body>
+</html>
