@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "JSB_Meeting/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "JSB_Meeting/wsgi.py"
+      }
+    ]
+  }
